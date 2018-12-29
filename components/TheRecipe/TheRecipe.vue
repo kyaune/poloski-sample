@@ -22,7 +22,7 @@
                      </ul>
                  </div>
                  <div class="photo">
-                     <img src="~/static/poloski.jpg">
+                     <img src="~/static/img/poloski.jpg">
                  </div>
             </div>
             <div class="second-paragraph">

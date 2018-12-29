@@ -1,9 +1,12 @@
 module.exports = {
+  router: {
+    base: '/poloski-sample/'
+  },
   /*
   ** Headers of the page
   */
   head: {
-    title: 'mayak-sample',
+    title: 'poloski',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

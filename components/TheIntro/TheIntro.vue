@@ -8,7 +8,7 @@
                 <p>История. Рецепт. Ассортимент</p>
             </div>
             <div class="photo">
-                <img src="~/static/aleksandrikook-puhas.jpg">
+                <img src="~/static/img/aleksandrikook-puhas.jpg">
             </div>
         </div>
     </div>

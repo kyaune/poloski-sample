@@ -8,7 +8,7 @@
                 
                     <div class="element">
                         <div class="photo">
-                            <img src="~/static/poloska1.png">
+                            <img src="~/static/img/poloska1.png" alt="">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -18,7 +18,7 @@
                     
                     <div class="element">
                         <div class="photo">
-                            <img src="~/static/poloska2.png">
+                            <img src="~/static/img/poloska2.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -28,7 +28,7 @@
                     
                     <div class="element">
                         <div class="photo">
-                            <img src="@/static/poloska3.png">
+                            <img src="@/static/img/poloska3.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -37,7 +37,7 @@
                     </div>
                      <div class="element">
                         <div class="photo">
-                            <img src="@/static/poloska4.png">
+                            <img src="@/static/img/poloska4.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -46,7 +46,7 @@
                     </div>
                      <div class="element">
                         <div class="photo">
-                            <img src="@/static/poloska5.png">
+                            <img src="@/static/img/poloska5.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -55,7 +55,7 @@
                     </div>
                      <div class="element">
                         <div class="photo">
-                            <img src="@/static/poloska6.png">
+                            <img src="@/static/img/poloska6.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
