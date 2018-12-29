@@ -20,11 +20,12 @@
     .content{
         display: flex;
         flex-direction: column;
+        max-width: 900px;
     }
     .header{
         font-size: 84px;
         max-width: 938px;
-        letter-spacing: 2px;
+        letter-spacing: 4px;
         font-weight: 800;
     }
     .description{

@@ -7,12 +7,19 @@
             <div class="first-paragraph">
                 <div class="text">
                     <p class="topic">ИНГРЕДИЕНТЫ:</p>
-                    <p>
-                        300 г муки, 120 г сахара, 1 ст. л. ванильного сахара, 1 яйцо, 
-                        180 г масла, 1 ч. л. разрыхлителя,  щепотка соли,  180 г 
-                        брусничного или малинового джема,  200 г сахарной пудры, 
-                        сок 1 лимона, 2 ст. л. какао-порошка.
-                     </p>
+                    <ul>
+                        <li>300 г муки</li>
+                        <li>120 г сахара</li>
+                        <li>1 ст. л. ванильного сахара</li>
+                        <li>1 яйцо</li>
+                        <li>180 г масла</li>
+                        <li>1 ч. л. разрыхлителя</li>
+                        <li>щепотка соли</li>
+                        <li>180 г джема</li>
+                        <li>200 г сахарной пудры</li>
+                        <li>сок 1 лимона</li>
+                        <li>2 ст. л. какао-порошка</li> 
+                     </ul>
                  </div>
                  <div class="photo">
                      <img src="~/static/poloski.jpg">
@@ -54,6 +61,7 @@
 
 <style scoped>
     .content{
+        max-width: 900px;
         margin-top: 80px;
         display: flex;
         flex-direction: column;
@@ -62,32 +70,45 @@
     .header{
         font-size: 64px;
         font-weight: bold;
+        letter-spacing: 3px;
     }
     .first-paragraph{
         margin-top: 40px;
         display: flex;
-        font-size: 18px;
     }
     .text{
-        max-width: 416px;
+        max-width: 516px;
+        font-size: 18px;
+        
     }
     .topic{
         font-weight: bold;
         margin-bottom: 25px;
+        font-size: 36px;
     }
     .second-paragraph{
         margin-top: 25px;
         font-size: 18px;
         font-style:italic;
-        max-width: 677px;
+        /* max-width: 677px; */
     }
     .step{
         font-weight: bold;
-        font-size: 20px;
+        font-size: 18px;
+        margin-bottom: 3px;
+        margin-top: 3px;
     }
     img{
         width: 362px;
         height: 204px;
         margin-left: 72px;
+    }
+    ul{
+        margin-left: 10px;
+        columns: 2;
+        list-style-type: circle;
+    }
+    li{
+        margin-left: 10px;
     }
 </style>

@@ -30,6 +30,7 @@
         
     }
     .content{
+        max-width: 900px;
         padding-top: 60px;
         padding-bottom: 60px;
         margin-left:12%;
@@ -50,6 +51,8 @@
         font-size: 64px;
         max-width: 938px;
         max-width: 703px;
+        font-weight: bold;
+        letter-spacing: 3px;
     }
     .description{
         font-size: 36px;
