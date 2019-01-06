@@ -1,7 +1,7 @@
 module.exports = {
-  router: {
-    mode: "hash"
-  },
+  // router: {
+  //   mode: "hash"
+  // },
   /*
   ** Headers of the page
   */
@@ -13,7 +13,6 @@ module.exports = {
       { hid: 'description', name: 'description', content: 'Nuxt.js project' },
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Cormorant'}
     ]
   },
@@ -28,7 +27,7 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    publicPath: '_nuxt/',
+    // publicPath: '_nuxt/',
     /*
     ** Run ESLint on save
     */
