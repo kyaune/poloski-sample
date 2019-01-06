@@ -8,7 +8,7 @@
                 
                     <div class="element">
                         <div class="photo">
-                            <img src="~/static/img/poloska1.png" alt="">
+                            <img src="~static/img/poloska1.png" alt="">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -18,7 +18,7 @@
                     
                     <div class="element">
                         <div class="photo">
-                            <img src="~/static/img/poloska2.png">
+                            <img src="~static/img/poloska2.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -46,7 +46,7 @@
                     </div>
                      <div class="element">
                         <div class="photo">
-                            <img src="@/static/img/poloska5.png">
+                            <img src="@/static/img/poloska7.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -71,7 +71,7 @@
     .main{
         margin-top: 60px;
         margin-left: -12%;
-        background-color: rgb(235, 106, 163, 0.4);
+        background-color: rgb(235, 106, 163, 0.2);
     }
     .content{
         max-width: 900px;

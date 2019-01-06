@@ -1,6 +1,6 @@
 module.exports = {
   router: {
-    base: '/poloski-sample/'
+    mode: "hash"
   },
   /*
   ** Headers of the page
@@ -17,6 +17,9 @@ module.exports = {
       {rel: 'stylesheet', href:'https://fonts.googleapis.com/css?family=Cormorant'}
     ]
   },
+  css : [
+    '~/static/css/reset.css'
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -25,11 +28,13 @@ module.exports = {
   ** Build configuration
   */
   build: {
+    publicPath: '_nuxt/',
     /*
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
+        // config.output.publicPath = './_nuxt/'
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
