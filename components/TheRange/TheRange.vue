@@ -8,7 +8,7 @@
                 
                     <div class="element">
                         <div class="photo">
-                            <img src="~static/img/poloska1.png" alt="">
+                            <img src="~assets/img/poloska1.png" alt="">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 
@@ -28,7 +28,7 @@
                     
                     <div class="element">
                         <div class="photo">
-                            <img src="@/static/img/poloska3.png">
+                            <img src="@/components/TheRange/poloska3.png">
                         </div>
                         <div class="description">
                             “Каравай” <br>Классика, но с необычной 

@@ -26,7 +26,6 @@ export default {
     TheFooter
   }
 }
-// require ('~/static/css/reset.css')
 </script>
 
 <style scoped>

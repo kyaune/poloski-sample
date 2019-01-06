@@ -1,7 +1,8 @@
 module.exports = {
-  // router: {
-  //   mode: "hash"
-  // },
+  router: {
+  //   mode: "hash",
+    base: './'
+  },
   /*
   ** Headers of the page
   */
@@ -17,7 +18,7 @@ module.exports = {
     ]
   },
   css : [
-    '~/static/css/reset.css'
+    '~assets/css/reset.css'
   ],
   /*
   ** Customize the progress bar color
