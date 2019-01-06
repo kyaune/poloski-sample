@@ -1,7 +1,7 @@
 module.exports = {
   router: {
   //   mode: "hash",
-    base: './'
+    base: '/poloski-sample/'
   },
   /*
   ** Headers of the page
@@ -24,6 +24,7 @@ module.exports = {
   ** Customize the progress bar color
   */
   loading: { color: '#3B8070' },
+  
   /*
   ** Build configuration
   */
@@ -42,7 +43,33 @@ module.exports = {
           exclude: /(node_modules)/
         })
       }
-    }
+    },
+    loaders: [
+      {
+          test: /\.(scss|sass|css)$/,
+          use: [{
+              loader: "style-loader"
+          }, {
+              loader: "css-loader"
+          }]
+      },
+      {
+          test: /\.(png|jpe?g|gif|svg)$/,
+          loader: 'url-loader',
+          query: {
+              limit: 1000,
+              name: 'img/[name].[hash:7].[ext]'
+          }
+      },
+      {
+          test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+          loader: 'url-loader',
+          query: {
+              limit: 1000,
+              name: 'fonts/[name].[hash:7].[ext]'
+          }
+      }
+  ],
   }
 }
 
