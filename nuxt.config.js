@@ -9,7 +9,7 @@ module.exports = {
   ...routerBase,
   router: {
     base: '/poloski-sample/'
-  }
+  },
   /*
   ** Headers of the page
   */
