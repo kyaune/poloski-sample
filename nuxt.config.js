@@ -1,7 +1,7 @@
 module.exports = {
   router: {
   //   mode: "hash",
-    base: '/poloski-sample/'
+    base: '/poloski-sample/docs/'
   },
   /*
   ** Headers of the page
