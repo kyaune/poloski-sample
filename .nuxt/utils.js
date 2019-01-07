@@ -128,7 +128,7 @@ export async function setContext(app, context) {
 
       payload: context.payload,
       error: context.error,
-      base: '/poloski-sample/',
+      base: '/poloski-sample/docs/',
       env: {}
     }
     // Only set once
