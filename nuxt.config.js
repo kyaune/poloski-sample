@@ -7,9 +7,9 @@ const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
 
 module.exports = {
   ...routerBase,
-  router: {
-    base: '/poloski-sample/'
-  },
+  // router: {
+  //   base: '/poloski-sample/'
+  // },
   /*
   ** Headers of the page
   */
