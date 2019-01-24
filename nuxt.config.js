@@ -27,6 +27,12 @@ module.exports = {
   css : [
     '~assets/css/reset.css'
   ],
+  modules: [
+    ['storyblok-nuxt', {
+      accessToken: '5n6Vr9MAdUOntHfmqMm7Qwtt',
+      cacheProvider: 'memory'
+    }]
+  ],
   /*
   ** Customize the progress bar color
   */
@@ -36,13 +42,11 @@ module.exports = {
   ** Build configuration
   */
   build: {
-    // publicPath: '_nuxt/',
     /*
     ** Run ESLint on save
     */
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
-        // config.output.publicPath = './_nuxt/'
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,

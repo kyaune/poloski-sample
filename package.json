@@ -2,7 +2,7 @@
   "name": "mayak-sample",
   "version": "1.0.0",
   "description": "Nuxt.js project",
-  "author": "",
+  "author": "S.Kyaune",
   "private": true,
   "scripts": {
     "dev": "nuxt",
@@ -15,7 +15,8 @@
     "generate:gh-pages": "DEPLOY_ENV=GH_PAGES nuxt generate"
   },
   "dependencies": {
-    "nuxt": "^2.0.0"
+    "nuxt": "^2.0.0",
+    "storyblok-nuxt": "^1.0.1"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",

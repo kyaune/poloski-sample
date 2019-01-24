@@ -11,6 +11,8 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 
 /* Plugins */
 
+import nuxt_plugin_templatespluginaaa21b36_5f774d34 from 'nuxt_plugin_templatespluginaaa21b36_5f774d34' // Source: ./templates.plugin.aaa21b36.js
+
 // Component: <no-ssr>
 Vue.component(NoSSR.name, NoSSR)
 
@@ -102,7 +104,32 @@ async function createApp(ssrContext) {
     beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined
   })
 
+  const inject = function (key, value) {
+    if (!key) throw new Error('inject(key, value) has no key provided')
+    if (typeof value === 'undefined') throw new Error('inject(key, value) has no value provided')
+    key = '$' + key
+    // Add into app
+    app[key] = value
+
+    // Check if plugin not already installed
+    const installKey = '__nuxt_' + key + '_installed__'
+    if (Vue[installKey]) return
+    Vue[installKey] = true
+    // Call Vue.use() to install the plugin into vm
+    Vue.use(() => {
+      if (!Vue.prototype.hasOwnProperty(key)) {
+        Object.defineProperty(Vue.prototype, key, {
+          get() {
+            return this.$root.$options[key]
+          }
+        })
+      }
+    })
+  }
+
   // Plugin execution
+
+  if (typeof nuxt_plugin_templatespluginaaa21b36_5f774d34 === 'function') await nuxt_plugin_templatespluginaaa21b36_5f774d34(app.context, inject)
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {
