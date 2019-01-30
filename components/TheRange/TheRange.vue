@@ -83,6 +83,18 @@
 </template>
 <script>
 export default {
+    // asyncData (context) {
+    //     return context.app.$storyapi
+    //     .get("cdn/stories",{ 
+    //         version: "draft",
+    //         starts_with: "assortment/"
+    //     })
+    //     .then(res =>{
+    //         console.log(res);
+    //         console.log('qwqwqw');
+    //         return res;
+    //     })
+    // }
     data() {
         return {
             poloski: [
