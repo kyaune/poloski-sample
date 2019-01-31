@@ -12,6 +12,7 @@ import { setContext, getLocation, getRouteData, normalizeError } from './utils'
 /* Plugins */
 
 import nuxt_plugin_templatespluginaaa21b36_5f774d34 from 'nuxt_plugin_templatespluginaaa21b36_5f774d34' // Source: ./templates.plugin.aaa21b36.js
+import nuxt_plugin_components_6fb0430c from 'nuxt_plugin_components_6fb0430c' // Source: ../plugins/components
 
 // Component: <no-ssr>
 Vue.component(NoSSR.name, NoSSR)
@@ -130,6 +131,7 @@ async function createApp(ssrContext) {
   // Plugin execution
 
   if (typeof nuxt_plugin_templatespluginaaa21b36_5f774d34 === 'function') await nuxt_plugin_templatespluginaaa21b36_5f774d34(app.context, inject)
+  if (typeof nuxt_plugin_components_6fb0430c === 'function') await nuxt_plugin_components_6fb0430c(app.context, inject)
 
   // If server-side, wait for async component to be resolved first
   if (process.server && ssrContext && ssrContext.url) {

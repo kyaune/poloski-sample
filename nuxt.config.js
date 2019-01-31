@@ -13,9 +13,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
- plugins: [
-  '~/plugins/components'
-],
+ 
   head: {
     title: 'poloski',
     meta: [
@@ -32,9 +30,12 @@ module.exports = {
   ],
   modules: [
     ['storyblok-nuxt', {
-      accessToken: 'OFbQzrWDtL0QbKrD4NKc0wtt',
+      accessToken: 'arnIfhW6f2lPGE2ZrLMkcwtt',
       cacheProvider: 'memory'
     }]
+  ],
+  plugins: [
+    '~/plugins/components'
   ],
   /*
   ** Customize the progress bar color

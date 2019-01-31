@@ -1,9 +1,6 @@
 <template>
   <div class="page-wrapper">
     <main>
-      <!-- <section class="util__container">
-    <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
-  </section> -->
       <TheIntro />
       <TheHistory />
       <TheRecipe />
@@ -19,7 +16,6 @@ import TheHistory from '~/components/TheHistory/TheHistory.vue'
 import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
 import TheRange from '~/components/TheRange/TheRange.vue'
 import TheFooter from '~/components/TheFooter/TheFooter.vue'
-import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 
 export default {
   components: {
@@ -29,6 +25,17 @@ export default {
     TheRange,
     TheFooter
   },
+  mounted () {
+  this.$storybridge.on(['input', 'published', 'change'], (event) => {
+    if (event.action == 'input') {
+      if (event.story.id === this.story.id) {
+        this.story.content = event.story.content
+      }
+    } else {
+      window.location.reload()
+    }
+  })
+},
 //    data () {
 //     return { story: { content: {} } }
 //   },
