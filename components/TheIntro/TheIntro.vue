@@ -1,26 +1,32 @@
 <template>
-    <!-- <div v-editable="blok" class="teaser">
-        <h1>{{blok.headline}}</h1> -->
     <div class="main">
         <div class="content">
             <div class="header">
-                <h1>Александровская полоска</h1>
+                <h1>{{title}}</h1>
             </div>
             <div class="description">
-                <p>История. Рецепт. Ассортимент</p>
+                <p>{{text}}</p>
             </div>
             <div class="photo">
                 <img src="~/static/img/aleksandrikook-puhas.jpg">
             </div>
         </div>
     </div>
-    <!-- </div> -->
 </template>
 
 <script>
-// export default {
-//   props: ['blok']
-// }
+export default {
+  props: {
+      title: {
+          type: String,
+          required: true
+      },
+      text: {
+          type: String,
+          required: true
+      }
+  }
+}
 </script>
 <style scoped>
     .main{
