@@ -5,24 +5,58 @@
                 <h1>История</h1>
             </div>
             <div class="description">
-                <p>Первое упоминание «Полоски» относится к 1802 году.</p>
+                <p>
+                    {{description}}
+                    <!-- Первое упоминание «Полоски» относится к 1802 году. -->
+
+                </p>
             </div>
             <div class="story">
                 <img src="~/static/img/alexandr1.png">
                 <p class="text"> 
-                    Эстонские кондитеры преподнесли это угощение Александру I в 
-                    знак благодарности за восстановление им Тартуского университета.
+                    {{text}}
+                    <!-- Эстонские кондитеры преподнесли это угощение Александру I в 
+                    знак благодарности за восстановление им Тартуского университета. -->
                 </p>
             </div>
             <div class="fact">
                 <p>
-                    Считается, что свое имя «Александровская полоска» получила в 
-                    честь Императора Александра I.  
+                    {{fact}}
+                    <!-- Считается, что свое имя «Александровская полоска» получила в 
+                    честь Императора Александра I.   -->
                 </p>
             </div>
         </div>    
     </div>    
 </template>
+<script>
+export default {
+    props: {
+        photo: {
+            type: String,
+            required: true
+        },
+        description: {
+            type: String,
+            required: true
+        },
+        fact: {
+            type: String,
+            required: true
+        },
+        text: {
+            type: String,
+            required: true
+        },
+        id: {
+            type: String,
+            required: true
+        }
+    }
+}
+</script>
+
+
 <style scoped>
     .main{
         margin-left: -12%;

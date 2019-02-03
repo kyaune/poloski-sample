@@ -10,8 +10,17 @@
       :id="header.id"
       />
                             
-      <!-- <TheHistory /> 
-      <TheRecipe />
+      <TheHistory 
+      v-for="header in headers"
+      :key="header.hsid"
+      :title="header.hstitle"
+      :photo="header.hsphoto"
+      :text="header.hstext"
+      :id="header.hsid"
+      :fact="header.hsfact"
+      :description="header.hsdescription"
+      /> 
+      <!-- <TheRecipe />
       <TheRange /> -->
     </main>
     <!-- <TheFooter /> -->
@@ -21,7 +30,7 @@
 <script>
 // import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 import TheIntro from '~/components/TheIntro/TheIntro.vue'
-// import TheHistory from '~/components/TheHistory/TheHistory.vue'
+import TheHistory from '~/components/TheHistory/TheHistory.vue'
 // import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
 // import TheRange from '~/components/TheRange/TheRange.vue'
 import TheFooter from '~/components/TheFooter/TheFooter.vue'
@@ -29,6 +38,7 @@ import TheFooter from '~/components/TheFooter/TheFooter.vue'
 export default {
 components: {
   TheIntro,
+  TheHistory,
   TheFooter
 },
    asyncData (context) {
@@ -46,9 +56,26 @@ components: {
                 id: hd.slug,
                 title: hd.content.title,
                 text: hd.content.description,
-                photo: hd.content.photo
+                photo: hd.content.photo,
+                hsid: hd.slug,
+                hsphoto: hd.content.photo,
+                hstext: hd.content.text,
+                hsfact: hd.content.fact,
+                hsdescription: hd.content.description,
+                hstitle: hd.content.title
               }
-            })
+            }),
+            // histories:
+            // res.data.stories.map(hs => {
+            //   return {
+            //     id: hs.slug,
+            //     photo: hs.content.photo,
+            //     text: hs.content.text,
+            //     fact: hs.content.fact,
+            //     description: hs.content.description,
+            //     title: hs.content.title
+            //   }
+            // })
             };
         })
     }
