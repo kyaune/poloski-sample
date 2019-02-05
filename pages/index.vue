@@ -3,22 +3,19 @@
     <!-- <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component> -->
     <main>
       <TheIntro 
-      v-for="header in headers"
-      :key="header.id"
-      :title="header.title"
-      :text="header.text"
-      :id="header.id"
+      :key="headers[1].id"
+      :title="headers[1].title"
+      :text="headers[1].text"
+      :id="headers[1].id"
       />
                             
       <TheHistory 
-      v-for="header in headers"
-      :key="header.hsid"
-      :title="header.hstitle"
-      :photo="header.hsphoto"
-      :text="header.hstext"
-      :id="header.hsid"
-      :fact="header.hsfact"
-      :description="header.hsdescription"
+      :title="headers[0].hstitle"
+      :photo="headers[0].hsphoto"
+      :text="headers[0].hstext"
+      :id="headers[0].hsid"
+      :fact="headers[0].hsfact"
+      :description="headers[0].hsdescription"
       /> 
       <!-- <TheRecipe />
       <TheRange /> -->
