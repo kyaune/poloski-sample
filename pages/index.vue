@@ -13,7 +13,7 @@
 </template>
 
 <script>
-// import storyblokLivePreview from '@/mixins/storyblokLivePreview'
+import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 import TheIntro from '~/components/TheIntro/TheIntro.vue'
 import TheHistory from '~/components/TheHistory/TheHistory.vue'
 // import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
