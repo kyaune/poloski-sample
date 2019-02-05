@@ -25,17 +25,9 @@
 </template>
 <script>
 export default {
-    asyncData (context) {
-        return context.app.$storyapi
-        .get("cdn/stories",{ 
-            version: "draft",
-            starts_with: "assortment/"
-        })
-        .then(res =>{
-            console.log(res);
-            return res;
-        })
-    }
+    
+    props: ['blok']
+}
     // data() {
     //     return {
     //         poloski: [
@@ -79,7 +71,7 @@ export default {
     //         ]
     //         }  
     // } 
-}
+
 </script>
 
 

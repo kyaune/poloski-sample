@@ -27,7 +27,7 @@ const Client = {
   install () {
     if (!Vue.prototype.$storyapi) {
       Vue.prototype.$storyapi = new StoryblokClient({
-        accessToken: 'gpZCbHzQiZIe9r0YupmxHgtt',
+        accessToken: '0sTUIen1LicUH7xLKmfVbAtt',
         cache: {
           clear: 'auto',
           type: 'memory'
@@ -40,7 +40,7 @@ const Client = {
         proxy: null,
         on: function(events, cb, options) {
           var options = options || {}
-          options.accessToken = 'gpZCbHzQiZIe9r0YupmxHgtt'
+          options.accessToken = '0sTUIen1LicUH7xLKmfVbAtt'
 
           this.load(() => {
             window.storyblok.init(options)

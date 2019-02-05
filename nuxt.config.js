@@ -30,7 +30,7 @@ module.exports = {
   ],
   modules: [
     ['storyblok-nuxt', {
-      accessToken: 'gpZCbHzQiZIe9r0YupmxHgtt',
+      accessToken: '0sTUIen1LicUH7xLKmfVbAtt',
       cacheProvider: 'memory'
     }]
   ],
