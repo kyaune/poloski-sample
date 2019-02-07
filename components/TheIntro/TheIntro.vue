@@ -3,10 +3,10 @@
         <!-- <component  v-if="intro" :blok="intro" :is="intro.component"></component> -->
         <div class="content"    >
             <div class="header">
-                <!-- <h1>{{intros.title}}</h1> -->
+                <h1>{{title}}</h1>
             </div>
             <div class="description">
-                <!-- <p>{{intros.text}}</p> -->
+                <p>{{description}}</p>
             </div>
             <div class="photo">
                 <img src="~/static/img/aleksandrikook-puhas.jpg">
@@ -17,27 +17,16 @@
 
 <script>
 export default {
-    asyncData (context) {
-        return context.app.$storyapi
-        .get("cdn/stories",{ 
-            version: "draft",
-            starts_with: "main/"
-        })
-        .then(res =>{
-            console.log(res);
-            return res;
-            // return {
-            //   intros:
-            // res.data.stories.map(hd => {
-            //   return {
-            //     id: hd.slug,
-            //     title: hd.content.title,
-            //     text: hd.content.description,
-            //   }
-            // }),
-            // };
-        })
-    }
+props: {
+    title: {
+        type: String,
+      required: true
+      },
+      description: {
+        type: String,
+      required: true
+      }
+}
 }
 </script>
 <style scoped>
