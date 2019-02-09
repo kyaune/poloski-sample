@@ -1,17 +1,17 @@
 <template>
     <div class="main">
         <!-- <component :key="blok._uid" v-for="blok in blok.body" :blok="blok" :is="blok.component"></component> -->
-        <!-- <div class="content">
+        <div class="content">
             <div class="header">
-                <h1> {{block.title}}
-                    История
+                <h1> {{title}}
+                    <!-- История -->
 
                 </h1>
             </div>
             <div class="description">
                 <p>
                     {{description}}
-                    Первое упоминание «Полоски» относится к 1802 году.
+                    <!-- Первое упоминание «Полоски» относится к 1802 году. -->
 
                 </p>
             </div>
@@ -19,24 +19,40 @@
                 <img src="~/static/img/alexandr1.png">
                 <p class="text"> 
                     {{text}}
-                    Эстонские кондитеры преподнесли это угощение Александру I в 
-                    знак благодарности за восстановление им Тартуского университета.
+                    <!-- Эстонские кондитеры преподнесли это угощение Александру I в 
+                    знак благодарности за восстановление им Тартуского университета. -->
                 </p>
             </div>
             <div class="fact">
                 <p>
                     {{fact}}
-                    Считается, что свое имя «Александровская полоска» получила в 
-                    честь Императора Александра I.  
-                    
+                    <!-- Считается, что свое имя «Александровская полоска» получила в 
+                    честь Императора Александра I.   -->
                 </p>
             </div>
-        </div>     -->
+        </div>    
     </div>    
 </template>
 <script>
 export default {
-    
+    props: {
+    title: {
+        type: String,
+      required: true
+      },
+      description: {
+        type: String,
+      required: true
+      },
+      text: {
+        type: String,
+      required: true
+      },
+      fact: {
+        type: String,
+      required: true
+      }
+}
 }
 </script>
 

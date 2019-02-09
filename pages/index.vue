@@ -2,17 +2,15 @@
   <div class="page-wrapper">
     <!-- <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component> -->
     <main
-    v-for="content in contents"
-    :key="content.id"
     >
       <TheIntro
       :title="contents[1].title"
       :description="contents[1].description"
       />
                             
-      <TheHistory
-      :title="contents[0].title"
-      :description="contents[0].description"
+      <TheHistory 
+      :text="contents[0].text"
+      :fact="contents[0].fact"
       /> 
       <!-- <TheRecipe />
       <TheRange /> -->
@@ -40,11 +38,14 @@ components: {
       version: 'draft',
       starts_with: "main/"
     }).then(res => {
+      console.log(res.data.stories.content)
       return {
-        content: res.data.stories.map(ct => {
+        contents: res.data.stories.map(ct => {
           return {
             title: ct.content.title,
-            description: ct.content.description
+            description: ct.content.description,
+            text: ct.content.text,
+            fact: ct.content.fact
           }
         })
       }
