@@ -11,6 +11,8 @@
       <TheHistory 
       :text="contents[0].text"
       :fact="contents[0].fact"
+      :title="contents[0].title"
+      :description="contents[0].description"
       /> 
       <!-- <TheRecipe />
       <TheRange /> -->
