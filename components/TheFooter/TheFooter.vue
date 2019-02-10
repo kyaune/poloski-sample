@@ -2,17 +2,32 @@
     <div class="main">
         <div class="content">
             <div class="copyrigth">
-                <p>Санкт-Петербургъ, 2018</p>
+                <p>
+                    {{title}}
+                    Санкт-Петербургъ, 2018
+                    </p>
             </div>
             <div class="info">
-                <p>Учебный макет сайта специально для Mayac Coding School</p>
+                <p>
+                    {{description}}
+                    Учебный макет сайта специально для Mayac Coding School
+                    </p>
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
-    props: ['blok']
+    props: {
+        title: {
+    type: String,
+    required: true
+    },
+    description: {
+    type: String,
+    required: true
+    },
+    }
 }
 </script>
 

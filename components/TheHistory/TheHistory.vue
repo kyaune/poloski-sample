@@ -1,6 +1,5 @@
 <template>
     <div class="main">
-        <!-- <component :key="blok._uid" v-for="blok in blok.body" :blok="blok" :is="blok.component"></component> -->
         <div class="content">
             <div class="header">
                 <h1> {{title}}
