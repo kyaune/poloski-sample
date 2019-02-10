@@ -4,18 +4,24 @@
     <main
     >
       <TheIntro
-      :title="contents[1].title"
-      :description="contents[1].description"
+      :title="contents[2].title"
+      :description="contents[2].description"
       />
                             
       <TheHistory 
-      :text="contents[0].text"
-      :fact="contents[0].fact"
-      :title="contents[0].title"
-      :description="contents[0].description"
+      :text="contents[1].text"
+      :fact="contents[1].fact"
+      :title="contents[1].title"
+      :description="contents[1].description"
       /> 
-      <!-- <TheRecipe />
-      <TheRange /> -->
+      <TheRecipe 
+      :steps="contents[0].steps"
+      :photo="contents[0].photo"
+      :title="contents[0].title"
+      :header="contents[0].header"
+      :ingredients="contents[0].ingredients"
+      />
+      <!-- <TheRange /> -->
     </main>
     <!-- <TheFooter /> -->
   </div>
@@ -25,7 +31,7 @@
 import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 import TheIntro from '~/components/TheIntro/TheIntro.vue'
 import TheHistory from '~/components/TheHistory/TheHistory.vue'
-// import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
+import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
 // import TheRange from '~/components/TheRange/TheRange.vue'
 // import TheFooter from '~/components/TheFooter/TheFooter.vue'
 
@@ -33,6 +39,7 @@ export default {
 components: {
   TheIntro,
   TheHistory,
+  TheRecipe,
 },
    
   asyncData(context) {
@@ -47,7 +54,11 @@ components: {
             title: ct.content.title,
             description: ct.content.description,
             text: ct.content.text,
-            fact: ct.content.fact
+            fact: ct.content.fact,
+            header: ct.content.header,
+            ingredients: ct.content.ingredients,
+            photo: ct.content.photo,
+            steps: ct.content.steps,
           }
         })
       }

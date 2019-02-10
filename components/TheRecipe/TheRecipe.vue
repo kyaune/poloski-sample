@@ -2,12 +2,19 @@
     <div class="main">
         <div class="content">
             <div class="header">
-                <h1>Классический рецепт</h1>
+                <h1>
+                    <!-- Классический рецепт -->
+                    {{title}}
+                </h1>
             </div>
             <div class="first-paragraph">
                 <div class="text">
-                    <p class="topic">ИНГРЕДИЕНТЫ:</p>
-                    <ul>
+                    <p class="topic">
+                        <!-- ИНГРЕДИЕНТЫ: -->
+                        {{header}}
+                        </p>
+                    {{ingredients}}
+                    <!-- <ul>
                         <li>300 г муки</li>
                         <li>120 г сахара</li>
                         <li>1 ст. л. ванильного сахара</li>
@@ -19,14 +26,15 @@
                         <li>200 г сахарной пудры</li>
                         <li>сок 1 лимона</li>
                         <li>2 ст. л. какао-порошка</li> 
-                     </ul>
+                     </ul> -->
                  </div>
                  <div class="photo">
                      <img src="~/static/img/poloski.jpg">
                  </div>
             </div>
             <div class="second-paragraph">
-                    <p class="step">Шаг 1</p>
+                {{steps}}
+                    <!-- <p class="step">Шаг 1</p>
                     Размягчите масло и взбейте его миксером с яйцом, 
                     обычным и ванильным сахаром добела.
                     <p class="step">Шаг 2</p>
@@ -46,40 +54,41 @@
                     Поверхность смажьте отложенным джемом. Важно делать все это, 
                     пока лепешки теплые.
                     <p class="step">Шаг 5</p>
-                    Смешайте сахарную пудру с таким количеством лимонного сока, 
+                    Смешайт е сахарную пудру с таким количеством лимонного сока, 
                     чтобы получилась текучая масса. Отложите пару ложек и смешайте с какао.
                     <p class="step">Шаг 6</p>
                     Полейте промазанные джемом лепешки получившейся глазурью и 
                     нарежьте полосками. Поверх глазури из кулинарного шприца
                     или бумажного «корнетика» выдавите полоски темной глазури 
-                    с какао. Дайте глазури застыть полностью.
+                    с какао. Дайте глазури застыть полностью. -->
             </div>
         </div>
     </div>
 </template>
 <script>
 export default {
+   props:  {
     title: {
-        type: String,
-      required: true
-      },
-      header: {
-        type: String,
-      required: true
-      },
-      ingredients: {
-        type: String,
-      required: true
-      },
-      steps: {
-        type: String,
-      required: true
-      },
-      photo: {
-        type: String,
-      required: true
-      },
-
+    type: String,
+    required: true
+    },
+    header: {
+    type: String,
+    required: true
+    },
+    ingredients: {
+    type: String,
+    required: true
+    },
+    steps: {
+    type: String,
+    required: true
+    },
+    photo: {
+    type: String,
+    required: true
+    }
+    }
 }
 </script>
 
