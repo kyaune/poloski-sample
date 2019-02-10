@@ -59,7 +59,27 @@
 </template>
 <script>
 export default {
-    props: ['blok']
+    title: {
+        type: String,
+      required: true
+      },
+      header: {
+        type: String,
+      required: true
+      },
+      ingredients: {
+        type: String,
+      required: true
+      },
+      steps: {
+        type: String,
+      required: true
+      },
+      photo: {
+        type: String,
+      required: true
+      },
+
 }
 </script>
 
