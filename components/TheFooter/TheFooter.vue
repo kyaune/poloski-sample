@@ -4,13 +4,13 @@
             <div class="copyrigth">
                 <p>
                     {{title}}
-                    Санкт-Петербургъ, 2018
+                    <!-- Санкт-Петербургъ, 2018 -->
                     </p>
             </div>
             <div class="info">
                 <p>
                     {{description}}
-                    Учебный макет сайта специально для Mayac Coding School
+                    <!-- Учебный макет сайта специально для Mayac Coding School -->
                     </p>
             </div>
         </div>

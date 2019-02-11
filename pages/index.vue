@@ -4,29 +4,29 @@
     <main
     >
       <TheIntro
-      :title="contents[2].title"
-      :description="contents[2].description"
+      :title="contents[3].title"
+      :description="contents[3].description"
       />
                             
       <TheHistory 
-      :text="contents[1].text"
-      :fact="contents[1].fact"
-      :title="contents[1].title"
-      :description="contents[1].description"
+      :text="contents[2].text"
+      :fact="contents[2].fact"
+      :title="contents[2].title"
+      :description="contents[2].description"
       /> 
       <TheRecipe 
-      :steps="contents[0].steps"
-      :photo="contents[0].photo"
-      :title="contents[0].title"
-      :header="contents[0].header"
-      :ingredients="contents[0].ingredients"
+      :steps="contents[1].steps"
+      :photo="contents[1].photo"
+      :title="contents[1].title"
+      :header="contents[1].header"
+      :ingredients="contents[1].ingredients"
       />
       <!-- <TheRange /> -->
     </main>
-    <!-- <TheFooter 
+    <TheFooter 
     :title="contents[0].title"
     :description="contents[0].description"
-    /> -->
+    />
   </div>
 </template>
 
