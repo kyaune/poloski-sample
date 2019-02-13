@@ -25,8 +25,11 @@
 </template>
 <script>
 export default {
-    
-   
+     props:  {
+    assortment: [
+        
+    ]
+     }
 }
     // data() {
     //     return {

@@ -4,8 +4,8 @@
     <main
     >
       <TheIntro
-      :title="contents[3].title"
-      :description="contents[3].description"
+      :title="contents[4].title"
+      :description="contents[4].description"
       />
                             
       <TheHistory 
@@ -21,7 +21,9 @@
       :header="contents[1].header"
       :ingredients="contents[1].ingredients"
       />
-      <!-- <TheRange /> -->
+      <TheRange 
+      :assortment="contents[3].assortment"
+      />
     </main>
     <TheFooter 
     :title="contents[0].title"
@@ -35,7 +37,7 @@ import storyblokLivePreview from '@/mixins/storyblokLivePreview'
 import TheIntro from '~/components/TheIntro/TheIntro.vue'
 import TheHistory from '~/components/TheHistory/TheHistory.vue'
 import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
-// import TheRange from '~/components/TheRange/TheRange.vue'
+import TheRange from '~/components/TheRange/TheRange.vue'
 import TheFooter from '~/components/TheFooter/TheFooter.vue'
 
 export default {
@@ -43,7 +45,8 @@ components: {
   TheIntro,
   TheHistory,
   TheRecipe,
-  TheFooter
+  TheFooter,
+  TheRange
 },
    
   asyncData(context) {
@@ -63,6 +66,7 @@ components: {
             ingredients: ct.content.ingredients,
             photo: ct.content.photo,
             steps: ct.content.steps,
+            assortment: ct.content.assortment
           }
         })
       }
