@@ -6,6 +6,7 @@
       <TheIntro
       :title="contents[4].title"
       :description="contents[4].description"
+      :photo="contents[4].photo"
       />
                             
       <TheHistory 
@@ -13,6 +14,7 @@
       :fact="contents[2].fact"
       :title="contents[2].title"
       :description="contents[2].description"
+      :photo="contents[2].photo"
       /> 
       <TheRecipe 
       :steps="contents[1].steps"

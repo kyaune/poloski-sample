@@ -5,16 +5,16 @@
                 <h1>Ассортимент</h1>
             </div>
             <div class="assortment">
-            <div class="wrapper" v-for="element in poloski"
-            :key="element.name"
+            <div class="wrapper" v-for="element in assortment"
+            :key="element.title"
             >
             <div class="element">
                         <div class="photo">
                             <img 
-                            :src="element.image" alt="element.name">
+                            :src="element.photo" alt="element.name">
                         </div>
                         <div class="description">
-                            {{element.name}} <br>{{element.description}} 
+                            {{element.title}} <br>{{element.description}} 
                             <br>{{element.score}}/10
                         </div>
                     </div>
@@ -26,9 +26,24 @@
 <script>
 export default {
      props:  {
-    assortment: [
-        
-    ]
+    assortment: {
+        score: {
+    type: String,
+    required: true
+    },
+    description: {
+    type: String,
+    required: true
+    },
+    title: {
+    type: String,
+    required: true
+    },
+    photo: {
+    type: String,
+    required: true
+    }
+    }
      }
 }
     // data() {

@@ -29,7 +29,8 @@
                      </ul> -->
                  </div>
                  <div class="photo">
-                     <img src="~/static/img/poloski.jpg">
+                     <img 
+                     :src="photo">
                  </div>
             </div>
             <div class="second-paragraph">

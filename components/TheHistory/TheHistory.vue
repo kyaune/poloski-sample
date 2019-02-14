@@ -15,7 +15,9 @@
                 </p>
             </div>
             <div class="story">
-                <img src="~/static/img/alexandr1.png">
+                <img 
+                :src="photo"
+                >
                 <p class="text"> 
                     {{text}}
                     <!-- Эстонские кондитеры преподнесли это угощение Александру I в 
@@ -48,6 +50,10 @@ export default {
       required: true
       },
       fact: {
+        type: String,
+      required: true
+      },
+      photo: {
         type: String,
       required: true
       }

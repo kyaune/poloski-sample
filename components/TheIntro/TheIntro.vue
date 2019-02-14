@@ -9,7 +9,9 @@
                 <p>{{description}}</p>
             </div>
             <div class="photo">
-                <img src="~/static/img/aleksandrikook-puhas.jpg">
+                <img
+                :src="photo"
+                >
             </div>
         </div>
     </div>
@@ -23,6 +25,10 @@ props: {
       required: true
       },
       description: {
+        type: String,
+      required: true
+      },
+      photo: {
         type: String,
       required: true
       }
