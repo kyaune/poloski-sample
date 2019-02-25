@@ -68,7 +68,7 @@ components: {
             ingredients: ct.content.ingredients,
             photo: ct.content.photo,
             assortment: ct.content.assortment,
-             steps: ct.content.steps,
+            steps: ct.content.steps,
           }
         })
       }
