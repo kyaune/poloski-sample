@@ -67,8 +67,8 @@ components: {
             header: ct.content.header,
             ingredients: ct.content.ingredients,
             photo: ct.content.photo,
-            steps: ct.content.steps,
-            assortment: ct.content.assortment
+            assortment: ct.content.assortment,
+             steps: ct.content.steps,
           }
         })
       }
