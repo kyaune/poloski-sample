@@ -62,8 +62,8 @@ components: {
           return {
             title: ct.content.title,
             description: ct.content.description,
-            text: ct.content.text,
             fact: ct.content.fact,
+            text: ct.content.text,
             header: ct.content.header,
             ingredients: ct.content.ingredients,
             photo: ct.content.photo,
