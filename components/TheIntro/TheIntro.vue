@@ -1,39 +1,72 @@
 <template>
     <div class="main">
-        <!-- <component  v-if="intro" :blok="intro" :is="intro.component"></component> -->
-        <div class="content"    >
+        <section class="content" id="intro">
             <div class="header">
-                <h1>{{title}}</h1>
+                <!-- <h1>{{title}}</h1> -->
             </div>
             <div class="description">
-                <p>{{description}}</p>
+                <!-- <p>{{description}}</p> -->
             </div>
             <div class="photo">
-                <img
+                <!-- <img
                 :src="photo"
-                >
+                > -->
             </div>
-        </div>
+            <button
+            ></button>
+        </section>
     </div>
 </template>
 
 <script>
 export default {
-props: {
-    title: {
-        type: String,
-      required: true
-      },
-      description: {
-        type: String,
-      required: true
-      },
-      photo: {
-        type: String,
-      required: true
-      }
+//     data () {
+//         return { story: { content : {} } }
+//     },
+//   asyncData(context) {
+//     return context.app.$storyapi
+//       .get("cdn/stories", {
+//         version: "draft",
+//         starts_with: "main/"
+//       })
+//       .then(res => {
+//         console.log(res);
+//         return {
+//           blok: res.data.story.content,
+//           title: res.data.stories.content.title,
+//           description: res.data.stories.content.description,
+//           photo: res.data.stories.content.photo
+//         };
+//       });
+//   },
+//   methods: {
+//       printf() {
+//           console.log(this.res.data);
+//       }
+//   }
+//   mounted() {
+//     this.$storyblok.init();
+//     this.$storyblok.on("change", () => {
+//       location.reload(true);
+//     });
+//   }
 }
-}
+// export default {
+// props: {
+//     title: {
+//         type: String,
+//       required: true
+//       },
+//       description: {
+//         type: String,
+//       required: true
+//       },
+//       photo: {
+//         type: String,
+//       required: true
+//       }
+// }
+// }
 </script>
 <style scoped>
     .main{

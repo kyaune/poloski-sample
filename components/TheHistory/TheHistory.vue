@@ -2,31 +2,32 @@
     <div class="main">
         <div class="content">
             <div class="header">
-                <h1> {{title}}
+                <h1> 
+                    <!-- {{title}} -->
                     <!-- История -->
 
                 </h1>
             </div>
             <div class="description">
                 <p>
-                    {{description}}
+                    <!-- {{description}} -->
                     <!-- Первое упоминание «Полоски» относится к 1802 году. -->
 
                 </p>
             </div>
             <div class="story">
-                <img 
+                <!-- <img 
                 :src="photo"
-                >
+                > -->
                 <p class="text"> 
-                    {{text}}
+                    <!-- {{text}} -->
                     <!-- Эстонские кондитеры преподнесли это угощение Александру I в 
                     знак благодарности за восстановление им Тартуского университета. -->
                 </p>
             </div>
             <div class="fact">
                 <p>
-                    {{fact}}
+                    <!-- {{fact}} -->
                     <!-- Считается, что свое имя «Александровская полоска» получила в 
                     честь Императора Александра I.   -->
                 </p>
@@ -36,28 +37,28 @@
 </template>
 <script>
 export default {
-    props: {
-    title: {
-        type: String,
-      required: true
-      },
-      description: {
-        type: String,
-      required: true
-      },
-      text: {
-        type: String,
-      required: true
-      },
-      fact: {
-        type: String,
-      required: true
-      },
-      photo: {
-        type: String,
-      required: true
-      }
-}
+//     props: {
+//     title: {
+//         type: String,
+//       required: true
+//       },
+//       description: {
+//         type: String,
+//       required: true
+//       },
+//     //   text: {
+//     //     type: String,
+//     //   required: true
+//     //   },
+//     //   fact: {
+//     //     type: String,
+//     //   required: true
+//     //   },
+//       photo: {
+//         type: String,
+//       required: true
+//       }
+// }
 }
 </script>
 

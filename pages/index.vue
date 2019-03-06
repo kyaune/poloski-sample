@@ -1,36 +1,33 @@
 <template>
   <div class="page-wrapper">
-    <!-- <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component> -->
-    <main
+    <section class="util__container">
+      <component v-if="story.content.component" 
+      :key="story.content._uid" 
+      :blok="story.content" 
+      :is="story.content.component"></component>
+    </section>
+    <!-- <main
     >
       <TheIntro
-      :title="contents[4].title"
-      :description="contents[4].description"
-      :photo="contents[4].photo"
+      
       />
+      <button
+      @click="console.log(ct.title)"
+      ></button>
                             
       <TheHistory 
-      :text="contents[2].text"
-      :fact="contents[2].fact"
-      :title="contents[2].title"
-      :description="contents[2].description"
-      :photo="contents[2].photo"
+      
       /> 
       <TheRecipe 
-      :steps="contents[1].steps"
-      :photo="contents[1].photo"
-      :title="contents[1].title"
-      :header="contents[1].header"
-      :ingredients="contents[1].ingredients"
+      
       />
       <TheRange 
-      :assortment="contents[3].assortment"
+      
       />
     </main>
     <TheFooter 
-    :title="contents[0].title"
-    :description="contents[0].description"
-    />
+    
+    /> -->
   </div>
 </template>
 
@@ -50,29 +47,35 @@ components: {
   TheFooter,
   TheRange
 },
+
+  // :text="contents[2].text"
+  //     :fact="contents[2].fact"
+  //     :title="contents[2].title"
+  //     :description="contents[2].description"
+  //     :photo="contents[2].photo"
    
+  //     :steps="contents[1].steps"
+  //     :photo="contents[1].photo"
+  //     :title="contents[1].title"
+  //     :header="contents[1].header"
+  //     :ingredients="contents[1].ingredients"
+
+  //     :assortment="contents[3].assortment"
+
+  //     :title="contents[0].title"
+  //   :description="contents[0].description"
+
+
   asyncData(context) {
-    return context.app.$storyapi.get('cdn/stories', {
+    return context.app.$storyapi.get('cdn/stories/main', {
       version: 'draft',
-      starts_with: "main/"
-    }).then(res => {
-      console.log(res.data.stories.content)
-      return {
-        contents: res.data.stories.map(ct => {
-          return {
-            title: ct.content.title,
-            description: ct.content.description,
-            fact: ct.content.fact,
-            text: ct.content.text,
-            header: ct.content.header,
-            ingredients: ct.content.ingredients,
-            photo: ct.content.photo,
-            assortment: ct.content.assortment,
-            steps: ct.content.steps,
-          }
-        })
-      }
+    }).then((res) => {
+      // console.log(res.data.stories.content)
+      return res.data
+      }).catch((res) => {
+      context.error({ statusCode: res.response.status, message: res.response.data })
     })
+    }
   }
 
 
@@ -93,7 +96,6 @@ components: {
   //     context.error({ statusCode: res.response.status, message: res.response.data })
   //   })
   // }
-}
 </script>
 
 
