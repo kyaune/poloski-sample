@@ -1,25 +1,26 @@
 <template>
-    <div class="main">
+<div class="main">
+    <div v-editable="blok" class="intro">
         <section class="content" id="intro">
             <div class="header">
-                <!-- <h1>{{title}}</h1> -->
+                <h1>{{ blok.title }} </h1>
             </div>
             <div class="description">
-                <!-- <p>{{description}}</p> -->
+                <p>{{  blok.description  }} </p>
             </div>
             <div class="photo">
-                <!-- <img
-                :src="photo"
-                > -->
+                <img
+                :src="blok.photo"
+                >
             </div>
-            <button
-            ></button>
         </section>
     </div>
+</div>
 </template>
 
 <script>
 export default {
+    props: ['blok']
 //     data () {
 //         return { story: { content : {} } }
 //     },

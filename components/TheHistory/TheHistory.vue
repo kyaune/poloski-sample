@@ -1,64 +1,39 @@
 <template>
     <div class="main">
-        <div class="content">
-            <div class="header">
-                <h1> 
-                    <!-- {{title}} -->
-                    <!-- История -->
-
-                </h1>
-            </div>
-            <div class="description">
-                <p>
-                    <!-- {{description}} -->
-                    <!-- Первое упоминание «Полоски» относится к 1802 году. -->
-
-                </p>
-            </div>
-            <div class="story">
-                <!-- <img 
-                :src="photo"
-                > -->
-                <p class="text"> 
-                    <!-- {{text}} -->
-                    <!-- Эстонские кондитеры преподнесли это угощение Александру I в 
-                    знак благодарности за восстановление им Тартуского университета. -->
-                </p>
-            </div>
-            <div class="fact">
-                <p>
-                    <!-- {{fact}} -->
-                    <!-- Считается, что свое имя «Александровская полоска» получила в 
-                    честь Императора Александра I.   -->
-                </p>
-            </div>
-        </div>    
+        <div v-editable="blok" class="intro">
+            <div class="content">
+                <div class="header">
+                    <h1> 
+                        {{ blok.title }}
+                    </h1>
+                </div>
+                <div class="description">
+                    <p>
+                        {{ blok.description }}
+                    </p>
+                </div>
+                <div class="story">
+                    <img 
+                    :src="blok.photo"
+                    >
+                    <p class="text"> 
+                        {{ blok.text }}
+                        
+                    </p>
+                </div>
+                <div class="fact">
+                    <p>
+                        {{ blok.fact }}
+                        
+                    </p>
+                </div>
+            </div>  
+        </div>  
     </div>    
 </template>
 <script>
 export default {
-//     props: {
-//     title: {
-//         type: String,
-//       required: true
-//       },
-//       description: {
-//         type: String,
-//       required: true
-//       },
-//     //   text: {
-//     //     type: String,
-//     //   required: true
-//     //   },
-//     //   fact: {
-//     //     type: String,
-//     //   required: true
-//     //   },
-//       photo: {
-//         type: String,
-//       required: true
-//       }
-// }
+    props:  ['blok']
 }
 </script>
 

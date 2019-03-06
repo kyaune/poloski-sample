@@ -1,12 +1,14 @@
 import Vue from 'vue'
-import TheIntro from '~/components/TheIntro/TheIntro.vue'
-import TheHistory from '~/components/TheHistory/TheHistory.vue'
-import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
-import TheRange from '~/components/TheRange/TheRange.vue'
-import TheFooter from '~/components/TheFooter/TheFooter.vue'
+import intro from '~/components/TheIntro/TheIntro.vue'
+import history from '~/components/TheHistory/TheHistory.vue'
+import recipe from '~/components/TheRecipe/TheRecipe.vue'
+import assortment from '~/components/TheRange/TheRange.vue'
+import footer from '~/components/TheFooter/TheFooter.vue'
+import Page from '~/components/Page.vue'
 
-Vue.component('intro', TheIntro)
-Vue.component('history', TheHistory)
-Vue.component('recipe', TheRecipe)
-Vue.component('assortment', TheRange)
-Vue.component('Thefooter', TheFooter)
+Vue.component('intro', intro)
+Vue.component('history', history)
+Vue.component('recipe', recipe)
+Vue.component('assortment', assortment)
+Vue.component('footer', footer)
+Vue.component('page', Page)

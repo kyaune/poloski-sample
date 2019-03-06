@@ -1,18 +1,14 @@
 <template>
-  <div class="page-wrapper">
-    <section class="util__container">
-      <component v-if="story.content.component" 
-      :key="story.content._uid" 
-      :blok="story.content" 
-      :is="story.content.component"></component>
-    </section>
+  <!-- <div class="page-wrapper"> -->
+   <section class="util__container">
+    <component v-if="story.content.component" :key="story.content._uid" :blok="story.content" :is="story.content.component"></component>
+  </section>
     <!-- <main
     >
       <TheIntro
       
       />
       <button
-      @click="console.log(ct.title)"
       ></button>
                             
       <TheHistory 
@@ -28,25 +24,14 @@
     <TheFooter 
     
     /> -->
-  </div>
+  <!-- </div> -->
 </template>
 
 <script>
 import storyblokLivePreview from '@/mixins/storyblokLivePreview'
-import TheIntro from '~/components/TheIntro/TheIntro.vue'
-import TheHistory from '~/components/TheHistory/TheHistory.vue'
-import TheRecipe from '~/components/TheRecipe/TheRecipe.vue'
-import TheRange from '~/components/TheRange/TheRange.vue'
-import TheFooter from '~/components/TheFooter/TheFooter.vue'
+
 
 export default {
-components: {
-  TheIntro,
-  TheHistory,
-  TheRecipe,
-  TheFooter,
-  TheRange
-},
 
   // :text="contents[2].text"
   //     :fact="contents[2].fact"
@@ -64,19 +49,24 @@ components: {
 
   //     :title="contents[0].title"
   //   :description="contents[0].description"
+  data () {
+    return { story: { content: {} } }
+  },
+  mixins: [storyblokLivePreview],
+  asyncData (context) {
+    // Check if we are in the editor mode
+    let version = context.query._storyblok || context.isDev ? 'draft' : 'published'
 
-
-  asyncData(context) {
-    return context.app.$storyapi.get('cdn/stories/main', {
-      version: 'draft',
+    // Load the JSON from the API
+    return context.app.$storyapi.get('cdn/stories/home', {
+      version: version
     }).then((res) => {
-      // console.log(res.data.stories.content)
       return res.data
-      }).catch((res) => {
+    }).catch((res) => {
       context.error({ statusCode: res.response.status, message: res.response.data })
     })
-    }
   }
+}
 
 
 
