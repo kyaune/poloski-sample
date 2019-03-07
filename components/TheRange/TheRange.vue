@@ -1,11 +1,13 @@
 <template>
+<main>
+<div v-editable="blok" class="assortment">
     <div class="main">
         <div class="content">
             <div class="header">
-                <h1>Ассортимент</h1>
+                <h1>{{  blok.title  }}</h1>
             </div>
             <div class="assortment">
-            <div class="wrapper" v-for="element in assortment"
+            <div class="wrapper" v-for="element in blok.body"
             :key="element.title"
             >
             <div class="element">
@@ -14,37 +16,20 @@
                             :src="element.photo" alt="element.name">
                         </div>
                         <div class="description">
-                            {{element.title}} <br>{{element.description}} 
-                            <br>{{element.score}}/10
+                            {{  element.title  }} <br>{{  element.description }} 
+                            <br>{{  element.score  }}/10
                         </div>
                     </div>
             </div>
             </div>
         </div>
     </div>
+</div>
+</main>
 </template>
 <script>
 export default {
-     props:  {
-    assortment: {
-        score: {
-    type: String,
-    required: true
-    },
-    description: {
-    type: String,
-    required: true
-    },
-    title: {
-    type: String,
-    required: true
-    },
-    photo: {
-    type: String,
-    required: true
-    }
-    }
-     }
+     props:  ['blok']
 }
     // data() {
     //     return {

@@ -1,33 +1,24 @@
 <template>
+<div v-editable="blok" class="down">
     <div class="main">
         <div class="content">
             <div class="copyrigth">
                 <p>
-                    {{title}}
-                    <!-- Санкт-Петербургъ, 2018 -->
+                    {{  blok.title  }}
                     </p>
             </div>
             <div class="info">
                 <p>
-                    {{description}}
-                    <!-- Учебный макет сайта специально для Mayac Coding School -->
+                    {{  blok.description  }}
                     </p>
             </div>
         </div>
     </div>
+</div>
 </template>
 <script>
 export default {
-    props: {
-        title: {
-    type: String,
-    required: true
-    },
-    description: {
-    type: String,
-    required: true
-    },
-    }
+    props: ['blok']
 }
 </script>
 

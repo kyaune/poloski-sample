@@ -1,19 +1,21 @@
 <template>
+<main>
+<div v-editable="blok" class="ingredients">
     <div class="main">
         <div class="content">
             <div class="header">
                 <h1>
                     <!-- Классический рецепт -->
-                    {{title}}
+                    {{  blok.title  }}
                 </h1>
             </div>
             <div class="first-paragraph">
                 <div class="text">
                     <p class="topic">
                         <!-- ИНГРЕДИЕНТЫ: -->
-                        {{header}}
+                        {{  blok.header  }}
                         </p>
-                    {{ingredients}}
+                    {{  blok.ingredients  }}
                     <!-- <ul>
                         <li>300 г муки</li>
                         <li>120 г сахара</li>
@@ -30,11 +32,11 @@
                  </div>
                  <div class="photo">
                      <img 
-                     :src="photo">
+                     :src="  blok.photo  ">
                  </div>
             </div>
             <div class="second-paragraph">
-                {{steps}}
+                {{  blok.steps  }}
                     <!-- <p class="step">Шаг 1</p>
                     Размягчите масло и взбейте его миксером с яйцом, 
                     обычным и ванильным сахаром добела.
@@ -65,31 +67,12 @@
             </div>
         </div>
     </div>
+</div>
+</main>
 </template>
 <script>
 export default {
-   props:  {
-    title: {
-    type: String,
-    required: true
-    },
-    header: {
-    type: String,
-    required: true
-    },
-    ingredients: {
-    type: String,
-    required: true
-    },
-    steps: {
-    type: String,
-    required: true
-    },
-    photo: {
-    type: String,
-    required: true
-    }
-    }
+   props:  ['blok']
 }
 </script>
 

@@ -1,6 +1,7 @@
 <template>
+<main>
     <div class="main">
-        <div v-editable="blok" class="intro">
+        <div v-editable="blok" class="history">
             <div class="content">
                 <div class="header">
                     <h1> 
@@ -29,7 +30,8 @@
                 </div>
             </div>  
         </div>  
-    </div>    
+    </div> 
+</main>   
 </template>
 <script>
 export default {

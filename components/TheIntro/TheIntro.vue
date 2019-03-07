@@ -1,4 +1,5 @@
 <template>
+<main>
 <div class="main">
     <div v-editable="blok" class="intro">
         <section class="content" id="intro">
@@ -16,6 +17,7 @@
         </section>
     </div>
 </div>
+</main>
 </template>
 
 <script>
