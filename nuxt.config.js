@@ -1,15 +1,6 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/poloski-sample/'
-  }
-} : {}
-
 
 module.exports = {
-  // ...routerBase,
-  // router: {
-  //   base: '/poloski-sample/'
-  // },
+
   /*
   ** Headers of the page
   */
@@ -59,32 +50,6 @@ module.exports = {
         })
       }
     },
-  //   loaders: [
-  //     {
-  //         test: /\.(scss|sass|css)$/,
-  //         use: [{
-  //             loader: "style-loader"
-  //         }, {
-  //             loader: "css-loader"
-  //         }]
-  //     },
-  //     {
-  //         test: /\.(png|jpe?g|gif|svg)$/,
-  //         loader: 'url-loader',
-  //         query: {
-  //             limit: 1000,
-  //             name: 'img/[name].[hash:7].[ext]'
-  //         }
-  //     },
-  //     {
-  //         test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-  //         loader: 'url-loader',
-  //         query: {
-  //             limit: 1000,
-  //             name: 'fonts/[name].[hash:7].[ext]'
-  //         }
-  //     }
-  // ],
   }
 }
 
