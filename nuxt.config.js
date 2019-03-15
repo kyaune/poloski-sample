@@ -1,6 +1,12 @@
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
+  router: {
+    base: '/poloski-sample/'
+  }
+} : {}
+
 
 module.exports = {
-
+  // ...routerBase,
   /*
   ** Headers of the page
   */
@@ -21,7 +27,7 @@ module.exports = {
   ],
   modules: [
     ['storyblok-nuxt', {
-      accessToken: '03xl6DwhUQnvFEKWooYrOwtt',
+      accessToken: process.env.NODE_ENV == 'production' ? 'skJo0XBurx4vsMnUvrn4bQtt' : '5n6Vr9MAdUOntHfmqMm7Qwtt',
       cacheProvider: 'memory'
     }]
   ],
